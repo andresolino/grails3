@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grails3-deployment
+  namespace: grails3
+  labels:
+    app: grails3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grails3
+  template:
+    metadata:
+      labels:
+        app: grails3
+    spec:
+      containers:
+        - name: grails3
+          image: andresolino/grails3:0.1
+          ports:
+            - containerPort: 8080

@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx
+  namespace: nginx-teste
+spec:
+  rules:
+    - host: grails3.177.20.148.99.nip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: grails3-service
+              servicePort: 80
