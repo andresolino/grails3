@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: nginx
-  namespace: nginx-teste
+  namespace: grails3
 spec:
   rules:
     - host: grails3.177.20.148.99.nip.io
